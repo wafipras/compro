@@ -12,15 +12,41 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Hapus atau comment dark mode untuk mencegah background hitam */
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
+  margin: 0;
+  padding: 0;
+  background: #ffffff; /* Force white background */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tambahan CSS untuk mencegah background hitam dari Swiper */
+.swiper {
+  background: transparent !important;
+}
+
+.swiper-wrapper {
+  background: transparent !important;
+}
+
+.swiper-slide {
+  background: transparent !important;
+}
+
+/* Reset untuk semua container */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  background-color: #ffffff !important;
 }
